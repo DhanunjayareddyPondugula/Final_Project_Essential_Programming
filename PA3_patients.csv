@@ -1,0 +1,100 @@
+,Patient_ID,Visit_ID,Visit_time,Visit_department,Gender,Race,Age,Ethnicity,Insurance,Zip_code,Chief_complaint,Note_ID,Note_type
+0,609360,151564,2010-12-18,Emergency department,Male,Pacific Islanders,100,Unknown,None,53116,injury,527774,progress note
+1,598428,167332,2002-5-21,Radiology,Male,Pacific Islanders,69,Hispanic,Blueshield,53751,back pain,832123,progress note
+2,28617,843435,2005-7-12,Emergency department,Male,Unknown,69,Non-Hispanic,Blueshield,53540,fatigue,791338,admission note
+3,841998,489557,2002-2-22,Radiology,Non-binary,Unknown,39,Hispanic,None,53353,injury,173292,social work note
+4,961234,748628,2011-5-6,Cardiology,Female,White,12,Other,None,53214,Unknown,834238,discharge note
+5,832410,79871,2016-4-9,Pediatrics,Female,White,19,Hispanic,Medicare,53033,chest pain,856164,oncology note
+6,776038,436659,2004-9-11,Head and Neck,Female,Unknown,39,Other,Blueshield,53506,injury,382328,admission note
+7,631439,551704,2016-2-19,Head and Neck,Female,White,42,Other,Medicare,53992,fatigue,676585,oncology note
+8,411840,412416,2011-11-5,Radiology,Female,Black,44,Non-Hispanic,Unknown,53551,Unknown,657419,oncology note
+9,442472,43930,2019-1-27,Obstetrics and gynaecology,Male,Native Americans,69,Unknown,Medicaid,53242,injury,445911,admission note
+10,403558,726891,2002-7-14,Neorology,Male,Native Americans,80,Non-Hispanic,Medicaid,53205,Unknown,250781,oncology note
+11,411645,342659,2002-10-14,Pediatrics,Male,Black,9,Hispanic,Medicaid,53908,back pain,251652,social work note
+12,42952,84507,2014-5-18,Pediatrics,Male,Asian,80,Unknown,Medicare,53293,chest pain,457649,progress note
+13,931213,557175,2016-3-20,Head and Neck,Male,White,63,Unknown,Blueshield,53642,bleeding,77627,progress note
+14,558317,15691,2021-1-27,Head and Neck,Female,Asian,2,Hispanic,None,53943,bleeding,712212,oncology note
+15,833506,651417,2003-3-12,Surgery,Male,Pacific Islanders,2,Other,None,53774,back pain,982515,social work note
+16,124373,787715,2023-7-19,Neorology,Female,Asian,3,Unknown,Unknown,53196,infection,545734,progress note
+17,701399,643126,2009-8-10,Neorology,Male,Asian,47,Unknown,Medicare,53933,back pain,630509,progress note
+18,992758,587636,2014-10-19,Psychiatry,Male,Pacific Islanders,8,Other,Blueshield,53587,back pain,496457,progress note
+19,613714,686805,2013-4-15,Cardiology,Male,Asian,72,Hispanic,Blueshield,53681,back pain,334821,social work note
+20,600392,484638,2014-9-22,Head and Neck,Female,Asian,76,Unknown,Medicaid,53872,fatigue,786761,discharge note
+21,616491,848685,2015-7-18,Pediatrics,Non-binary,Native Americans,24,Other,Medicare,53896,back pain,264091,oncology note
+22,871623,255108,2001-10-3,Psychiatry,Male,Unknown,12,Non-Hispanic,Blueshield,53964,fatigue,869118,discharge note
+23,254301,99200,2018-12-19,Pediatrics,Non-binary,Pacific Islanders,81,Non-Hispanic,Blueshield,53393,infection,531165,social work note
+24,383077,155958,2014-6-26,Emergency department,Female,Unknown,71,Non-Hispanic,Blueshield,53224,chest pain,256573,social work note
+25,331827,104920,2009-9-15,Psychiatry,Female,White,71,Non-Hispanic,Medicare,53900,Unknown,393183,social work note
+26,216501,449631,2010-7-7,Head and Neck,Non-binary,Pacific Islanders,73,Other,Unknown,53907,infection,195751,oncology note
+27,965888,521393,2001-4-28,Pediatrics,Male,Black,51,Unknown,Medicare,53609,Unknown,792947,social work note
+28,926837,114284,2006-6-14,Head and Neck,Female,Pacific Islanders,45,Unknown,Unknown,53919,chest pain,223439,discharge note
+29,79711,365995,2016-7-5,Neorology,Male,Asian,55,Hispanic,Medicaid,53724,bleeding,50046,admission note
+30,29447,337654,2023-4-20,Pediatrics,Female,Black,75,Non-Hispanic,Blueshield,53802,Unknown,681159,oncology note
+31,632514,166125,2006-7-8,Surgery,Female,Asian,36,Unknown,Medicaid,53844,chest pain,241039,discharge note
+32,955517,169698,2015-12-11,Cardiology,Non-binary,Unknown,60,Hispanic,None,53062,infection,840735,progress note
+33,307800,496614,2005-5-11,Psychiatry,Male,Asian,13,Other,Medicaid,53694,Unknown,261312,discharge note
+34,203718,91136,2006-8-1,Pediatrics,Female,White,1,Non-Hispanic,Medicare,53123,bleeding,816293,social work note
+35,16755,591642,2011-7-13,Emergency department,Non-binary,Pacific Islanders,67,Hispanic,None,53449,infection,675629,admission note
+36,294687,87509,2002-9-15,Surgery,Non-binary,Native Americans,84,Hispanic,Blueshield,53130,bleeding,534010,admission note
+37,474486,45765,2020-4-5,Head and Neck,Female,Pacific Islanders,91,Non-Hispanic,Blueshield,53030,bleeding,256448,admission note
+38,761145,231793,2017-6-15,Psychiatry,Female,Pacific Islanders,93,Hispanic,Unknown,53779,infection,339,discharge note
+39,87870,341323,2004-4-11,Obstetrics and gynaecology,Female,Black,9,Other,Unknown,53291,infection,294247,oncology note
+40,427495,334502,2022-6-19,Cardiology,Female,Native Americans,3,Hispanic,Medicare,53187,Unknown,643976,social work note
+41,516289,195104,2008-10-5,Surgery,Female,Black,48,Hispanic,Medicare,53582,injury,662580,discharge note
+42,492225,742926,2022-12-25,Radiology,Female,Black,58,Other,Blueshield,53186,Unknown,851130,progress note
+43,307975,11826,2007-12-19,Radiology,Non-binary,Asian,18,Other,Blueshield,53997,fatigue,580541,admission note
+44,912417,627974,2002-9-5,Radiology,Non-binary,Black,28,Non-Hispanic,Unknown,53473,back pain,545764,admission note
+45,146681,37115,2000-11-11,Obstetrics and gynaecology,Non-binary,Pacific Islanders,82,Unknown,Medicare,53491,bleeding,59395,progress note
+46,890409,848239,2021-12-16,Pediatrics,Male,White,72,Unknown,Unknown,53691,injury,625699,social work note
+47,828582,907946,2005-3-1,Surgery,Male,Asian,17,Non-Hispanic,None,53835,bleeding,887460,oncology note
+48,319919,230076,2015-3-23,Emergency department,Female,Pacific Islanders,6,Hispanic,Medicare,53970,chest pain,131533,admission note
+49,816248,558370,2004-10-15,Head and Neck,Non-binary,Native Americans,31,Non-Hispanic,Blueshield,53936,chest pain,203193,admission note
+50,400396,473161,2008-4-28,Head and Neck,Male,Native Americans,77,Non-Hispanic,Unknown,53872,bleeding,184895,oncology note
+51,58133,962934,2007-7-6,Head and Neck,Male,Native Americans,94,Other,Unknown,53196,fatigue,661621,discharge note
+52,172573,900289,2005-6-8,Surgery,Male,Native Americans,92,Non-Hispanic,Blueshield,53187,bleeding,226288,social work note
+53,50194,500834,2014-9-10,Pediatrics,Male,Black,70,Unknown,None,53352,infection,46366,oncology note
+54,297103,746445,2005-9-18,Psychiatry,Non-binary,Unknown,83,Other,Medicaid,53892,bleeding,772110,admission note
+55,16758,165876,2018-6-8,Surgery,Female,Black,81,Hispanic,Medicare,53634,chest pain,575754,progress note
+56,68490,156571,2020-9-2,Emergency department,Non-binary,White,2,Other,Unknown,53232,back pain,553201,oncology note
+57,491988,14354,2002-12-26,Emergency department,Male,Native Americans,12,Unknown,Blueshield,53426,infection,521908,social work note
+58,455040,808133,2005-11-4,Psychiatry,Male,Black,47,Non-Hispanic,None,53373,Unknown,102874,oncology note
+59,435048,604112,2009-7-20,Pediatrics,Male,Unknown,2,Hispanic,Medicare,53165,Unknown,319306,discharge note
+60,289368,763886,2020-12-3,Head and Neck,Female,Pacific Islanders,24,Other,Unknown,53662,bleeding,444433,discharge note
+61,627644,426360,2010-2-10,Psychiatry,Non-binary,Native Americans,85,Non-Hispanic,Medicare,53151,back pain,831722,discharge note
+62,714903,214970,2003-3-22,Cardiology,Non-binary,White,7,Hispanic,Unknown,53216,chest pain,5715,discharge note
+63,634917,675192,2011-3-2,Obstetrics and gynaecology,Female,Asian,83,Non-Hispanic,None,53673,injury,168700,social work note
+64,71722,678825,2017-5-27,Cardiology,Female,Pacific Islanders,46,Other,None,53374,infection,608638,social work note
+65,895414,615655,2012-11-18,Surgery,Male,Asian,87,Other,None,53753,injury,753602,social work note
+66,473704,59381,2013-1-6,Pediatrics,Female,White,17,Unknown,Medicare,53252,fatigue,485993,social work note
+67,610235,331487,2000-12-12,Psychiatry,Non-binary,White,21,Hispanic,None,53121,injury,6315,social work note
+68,202319,40119,2012-8-7,Psychiatry,Female,Unknown,100,Non-Hispanic,Unknown,53121,bleeding,893237,social work note
+69,320742,815465,2012-8-21,Psychiatry,Non-binary,Pacific Islanders,62,Unknown,Unknown,53234,infection,533564,progress note
+70,896478,519085,2004-10-19,Obstetrics and gynaecology,Male,White,24,Non-Hispanic,Unknown,53354,infection,787205,social work note
+71,938437,41823,2008-8-25,Obstetrics and gynaecology,Female,Native Americans,55,Non-Hispanic,None,53070,chest pain,894771,progress note
+72,488070,540784,2017-12-27,Cardiology,Female,White,52,Hispanic,Blueshield,53070,chest pain,860462,progress note
+73,250132,113474,2017-10-17,Cardiology,Male,Pacific Islanders,96,Non-Hispanic,Medicaid,53717,fatigue,244157,admission note
+74,912126,692219,2015-12-28,Neorology,Non-binary,Pacific Islanders,13,Other,None,53547,infection,640007,progress note
+75,264872,211115,2012-12-24,Head and Neck,Female,White,63,Hispanic,None,53048,Unknown,445895,discharge note
+76,255289,406681,2012-10-23,Psychiatry,Non-binary,Pacific Islanders,28,Unknown,Blueshield,53974,chest pain,272022,oncology note
+77,418439,942204,2019-5-25,Cardiology,Male,Black,81,Hispanic,None,53626,fatigue,260268,oncology note
+78,797624,983319,2011-8-26,Head and Neck,Non-binary,Black,3,Hispanic,Medicare,53681,infection,625844,oncology note
+79,161867,775655,2019-4-5,Obstetrics and gynaecology,Male,White,54,Other,Unknown,53085,back pain,913819,progress note
+80,384335,301142,2020-8-11,Neorology,Female,Asian,32,Non-Hispanic,Unknown,53793,back pain,3840,oncology note
+81,696539,531622,2020-7-20,Psychiatry,Non-binary,Native Americans,64,Unknown,Medicare,53896,injury,555974,admission note
+82,807114,218091,2010-10-12,Surgery,Male,Black,75,Unknown,Blueshield,53604,bleeding,590938,social work note
+83,315313,254146,2014-12-21,Emergency department,Male,Unknown,75,Other,Blueshield,53104,chest pain,283866,discharge note
+84,767335,217164,2005-6-11,Head and Neck,Female,Unknown,49,Hispanic,Unknown,53373,Unknown,948086,discharge note
+85,917816,518277,2022-9-2,Head and Neck,Non-binary,Pacific Islanders,92,Non-Hispanic,Medicaid,53274,Unknown,115509,oncology note
+86,772533,719705,2007-9-28,Radiology,Female,Native Americans,52,Non-Hispanic,Medicaid,53813,chest pain,666580,discharge note
+87,640135,275683,2007-4-5,Emergency department,Female,Black,16,Non-Hispanic,None,53004,injury,941168,discharge note
+88,361166,847569,2006-5-14,Emergency department,Non-binary,Black,63,Non-Hispanic,Medicare,53247,Unknown,753031,discharge note
+89,288543,353887,2002-9-16,Obstetrics and gynaecology,Male,Native Americans,12,Other,Medicaid,53611,injury,57315,social work note
+90,128405,362899,2012-10-24,Neorology,Non-binary,White,66,Non-Hispanic,Medicare,53577,injury,816983,oncology note
+91,925841,583271,2004-1-7,Neorology,Non-binary,Black,43,Non-Hispanic,None,53559,back pain,902256,discharge note
+92,842169,772130,2012-1-10,Radiology,Non-binary,Unknown,74,Hispanic,None,53706,chest pain,822830,admission note
+93,879757,53671,2018-12-8,Surgery,Non-binary,White,53,Hispanic,Medicare,53864,Unknown,455309,discharge note
+94,465712,644114,2007-10-2,Emergency department,Male,Pacific Islanders,57,Other,Unknown,53164,Unknown,556122,progress note
+95,645950,45017,2021-9-11,Cardiology,Female,Native Americans,88,Other,Medicaid,53220,Unknown,531589,social work note
+96,465541,484587,2001-5-20,Neorology,Non-binary,Unknown,88,Hispanic,Medicare,53769,injury,358959,social work note
+97,954495,608427,2019-1-1,Emergency department,Male,Black,44,Hispanic,Blueshield,53159,infection,438071,progress note
+98,123123,09876,2005-07-12,Emergency,Male,Black,30,Hispanic,Medicare,43211,Pain,64329,Progress Note
