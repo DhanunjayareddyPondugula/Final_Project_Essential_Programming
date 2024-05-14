@@ -8,6 +8,7 @@ from user_authentication import UserAuthentication
 from patient_record_manager import PatientRecordManager
 from patient_record import PatientRecord
 
+
 class HospitalApp:
     def __init__(self, root):
         self.root = root
@@ -26,20 +27,24 @@ class HospitalApp:
         self.login_frame = tk.Frame(root)
         self.login_frame.pack(pady=20)
 
-        self.username_label = tk.Label(self.login_frame, text="Username:", font=self.label_font, bg="#f0f0f0")
+        self.username_label = tk.Label(
+            self.login_frame, text="Username:", font=self.label_font, bg="#f0f0f0")
         self.username_label.grid(row=0, column=0, padx=10, pady=5, sticky="w")
         self.username_entry = tk.Entry(self.login_frame, font=self.entry_font)
         self.username_entry.grid(row=0, column=1, padx=10, pady=5)
 
-        self.password_label = tk.Label(self.login_frame, text="Password:", font=self.label_font, bg="#f0f0f0")
+        self.password_label = tk.Label(
+            self.login_frame, text="Password:", font=self.label_font, bg="#f0f0f0")
         self.password_label.grid(row=1, column=0, padx=10, pady=5, sticky="w")
-        self.password_entry = tk.Entry(self.login_frame, show="*", font=self.entry_font)
+        self.password_entry = tk.Entry(
+            self.login_frame, show="*", font=self.entry_font)
         self.password_entry.grid(row=1, column=1, padx=10, pady=5)
 
-        self.login_button = tk.Button(self.login_frame, text="Login", font=self.label_font, command=self.login, bg="#4CAF50", fg="white", relief="raised", borderwidth=3)
+        self.login_button = tk.Button(self.login_frame, text="Login", font=self.label_font,
+                                      command=self.login, bg="#4CAF50", fg="white", relief="raised", borderwidth=3)
         self.login_button.grid(row=2, columnspan=2, pady=10)
 
-         # Check if the usage log file exists
+        # Check if the usage log file exists
         if not os.path.exists("usage_log.csv"):
             # If it doesn't exist, create the file and write the header row
             with open("usage_log.csv", "w", newline="") as f:
@@ -53,7 +58,14 @@ class HospitalApp:
     def log_usage(self, action):
         # Log the usage statistics with relevant information
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        self.usage_log_writer.writerow([self.current_user, self.current_role, action, timestamp])
+        self.usage_log_writer.writerow(
+            [self.current_user, self.current_role, action, timestamp])
+        self.usage_log_file.flush()
+
+    def log_usage_invalid_user(self, action):
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        self.usage_log_writer.writerow(
+            ['Invalid User', 'No role', action, timestamp])
         self.usage_log_file.flush()
 
     def login(self):
@@ -64,12 +76,14 @@ class HospitalApp:
 
         if role is None:
             messagebox.showerror("Error", "Invalid credentials.")
+            self.log_usage_invalid_user('Unsuccessful Login')
         else:
             self.current_user = username
             self.current_role = role
             self.patient_manager = PatientRecordManager("PA3_patients.csv")
             self.login_frame.destroy()
             self.show_menu(role)
+            self.log_usage('Successful Login')
 
     def show_menu(self, role):
         # Styling
@@ -90,55 +104,68 @@ class HospitalApp:
         self.menu_frame.pack(pady=20)
 
         welcome_label_text = "Welcome! You are logged in as " + role
-        self.welcome_label = tk.Label(self.menu_frame, text=welcome_label_text, bg=label_bg_color, fg=label_fg_color, font=label_font, pady=10)
+        self.welcome_label = tk.Label(self.menu_frame, text=welcome_label_text,
+                                      bg=label_bg_color, fg=label_fg_color, font=label_font, pady=10)
         self.welcome_label.pack(fill="x")
 
         if role == "management":
-            self.key_stats_button = tk.Button(self.menu_frame, text="Generate Key Statistics", command=self.generate_key_statistics, bg=button_bg_color, fg=button_fg_color, font=button_font, relief=button_relief, borderwidth=button_border_width, width=button_width, height=button_height)
+            self.key_stats_button = tk.Button(self.menu_frame, text="Generate Key Statistics", command=self.generate_key_statistics, bg=button_bg_color,
+                                              fg=button_fg_color, font=button_font, relief=button_relief, borderwidth=button_border_width, width=button_width, height=button_height)
             self.key_stats_button.pack(pady=pady)
-    
+
         elif role == "admin":
-            self.count_visits_button = tk.Button(self.menu_frame, text="Count Visits", command=self.count_visits, bg=button_bg_color, fg=button_fg_color, font=button_font, relief=button_relief, borderwidth=button_border_width, width=button_width, height=button_height)
+            self.count_visits_button = tk.Button(self.menu_frame, text="Count Visits", command=self.count_visits, bg=button_bg_color, fg=button_fg_color,
+                                                 font=button_font, relief=button_relief, borderwidth=button_border_width, width=button_width, height=button_height)
             self.count_visits_button.pack(pady=pady)
 
         elif role in ["nurse", "clinician"]:
-            self.retrieve_patient_button = tk.Button(self.menu_frame, text="Retrieve Patient", command=self.retrieve_patient, bg=button_bg_color, fg=button_fg_color, font=button_font, relief=button_relief, borderwidth=button_border_width, width=button_width, height=button_height)
+            self.retrieve_patient_button = tk.Button(self.menu_frame, text="Retrieve Patient", command=self.retrieve_patient, bg=button_bg_color,
+                                                     fg=button_fg_color, font=button_font, relief=button_relief, borderwidth=button_border_width, width=button_width, height=button_height)
             self.retrieve_patient_button.pack(pady=pady)
 
-            self.add_patient_button = tk.Button(self.menu_frame, text="Add Patient", command=self.add_patient, bg=button_bg_color, fg=button_fg_color, font=button_font, relief=button_relief, borderwidth=button_border_width, width=button_width, height=button_height)
+            self.add_patient_button = tk.Button(self.menu_frame, text="Add Patient", command=self.add_patient, bg=button_bg_color, fg=button_fg_color,
+                                                font=button_font, relief=button_relief, borderwidth=button_border_width, width=button_width, height=button_height)
             self.add_patient_button.pack(pady=pady)
 
-            self.remove_patient_button = tk.Button(self.menu_frame, text="Remove Patient", command=self.remove_patient, bg=button_bg_color, fg=button_fg_color, font=button_font, relief=button_relief, borderwidth=button_border_width, width=button_width, height=button_height)
+            self.remove_patient_button = tk.Button(self.menu_frame, text="Remove Patient", command=self.remove_patient, bg=button_bg_color,
+                                                   fg=button_fg_color, font=button_font, relief=button_relief, borderwidth=button_border_width, width=button_width, height=button_height)
             self.remove_patient_button.pack(pady=pady)
 
-            self.count_visits_button = tk.Button(self.menu_frame, text="Count Visits", command=self.count_visits, bg=button_bg_color, fg=button_fg_color, font=button_font, relief=button_relief, borderwidth=button_border_width, width=button_width, height=button_height)
+            self.count_visits_button = tk.Button(self.menu_frame, text="Count Visits", command=self.count_visits, bg=button_bg_color, fg=button_fg_color,
+                                                 font=button_font, relief=button_relief, borderwidth=button_border_width, width=button_width, height=button_height)
             self.count_visits_button.pack(pady=pady)
 
-        self.exit_button = tk.Button(self.menu_frame, text="Exit", command=self.root.destroy, bg=button_bg_color, fg=button_fg_color, font=button_font, relief=button_relief, borderwidth=button_border_width, width=button_width, height=button_height)
+        self.exit_button = tk.Button(self.menu_frame, text="Exit", command=self.root.destroy, bg=button_bg_color, fg=button_fg_color,
+                                     font=button_font, relief=button_relief, borderwidth=button_border_width, width=button_width, height=button_height)
         self.exit_button.pack(pady=pady)
 
     def generate_key_statistics(self):
         self.patient_manager.generate_key_statistics()
-        messagebox.showinfo("Info", "Key statistics generated.",parent=self.root)
-        # Log usage 
+        messagebox.showinfo(
+            "Info", "Key statistics generated.", parent=self.root)
+        # Log usage
         self.log_usage("Generate Statistics")
 
     def retrieve_patient(self):
-        patient_id = simpledialog.askstring("Input", "Enter Patient ID:", parent=self.root)
+        patient_id = simpledialog.askstring(
+            "Input", "Enter Patient ID:", parent=self.root)
         if patient_id is not None:
-            patient_record = self.patient_manager.retrieve_patient_record(patient_id)
+            patient_record = self.patient_manager.retrieve_patient_record(
+                patient_id)
             if patient_record:
-                messagebox.showinfo("Patient Information", patient_record,parent=self.root)
+                messagebox.showinfo("Patient Information",
+                                    patient_record, parent=self.root)
             else:
-                messagebox.showerror("Error", "Patient not found.",parent=self.root)
-        # Log usage 
+                messagebox.showerror(
+                    "Error", "Patient not found.", parent=self.root)
+        # Log usage
         self.log_usage("Retrieve Patient")
 
     def add_patient(self):
         # Create a new window for adding a patient
         self.add_patient_window = Toplevel(self.root)
         self.add_patient_window.title("Add Patient")
-        self.add_patient_window.geometry("500x500")
+        self.add_patient_window.geometry("400x500")
 
         # Styling
         label_bg_color = "#f0f0f0"
@@ -156,18 +183,21 @@ class HospitalApp:
         self.entries = []  # List to store Entry widgets
 
         for i, label_text in enumerate(labels):
-            label = Label(self.add_patient_window, text=label_text, bg=label_bg_color)
+            label = Label(self.add_patient_window,
+                          text=label_text, bg=label_bg_color)
             label.grid(row=i, column=0, padx=padx, pady=pady, sticky="w")
 
-            entry = Entry(self.add_patient_window, bg=entry_bg_color, font=entry_font)
+            entry = Entry(self.add_patient_window,
+                          bg=entry_bg_color, font=entry_font)
             entry.grid(row=i, column=1, padx=padx, pady=pady)
             self.entries.append(entry)  # Add Entry widget to the list
 
         # Button to submit patient information
-        self.submit_button = Button(self.add_patient_window, text="Submit", command=self.submit_patient_info)
+        self.submit_button = Button(
+            self.add_patient_window, text="Submit", command=self.submit_patient_info)
         self.submit_button.grid(row=13, column=1, padx=10, pady=10)
 
-        # Log usage 
+        # Log usage
         self.log_usage("Add Patient")
 
     def submit_patient_info(self):
@@ -187,35 +217,43 @@ class HospitalApp:
         note_type = self.entries[12].get()
 
         # Call add_patient_record method of PatientRecordManager
-        patient_record = PatientRecord(patient_id, visit_id, visit_time, visit_department, gender, race, age, ethnicity, insurance, zip_code, chief_complaint, note_id, note_type)
+        patient_record = PatientRecord(patient_id, visit_id, visit_time, visit_department, gender,
+                                       race, age, ethnicity, insurance, zip_code, chief_complaint, note_id, note_type)
         self.patient_manager.add_patient_record(patient_record)
 
         # Show success message
-        messagebox.showinfo("Success", "Patient added successfully.",parent=self.root)
+        messagebox.showinfo(
+            "Success", "Patient added successfully.", parent=self.root)
 
     def remove_patient(self):
-        patient_id = simpledialog.askstring("Input", "Enter Patient ID:",parent=self.root)
+        patient_id = simpledialog.askstring(
+            "Input", "Enter Patient ID:", parent=self.root)
         if patient_id is not None:
             if self.patient_manager.remove_patient_record(patient_id):
-                messagebox.showinfo("Info", "Patient removed successfully.",parent=self.root)
+                messagebox.showinfo(
+                    "Info", "Patient removed successfully.", parent=self.root)
             else:
-                messagebox.showerror("Error", "Patient not found.",parent=self.root)
-        
+                messagebox.showerror(
+                    "Error", "Patient not found.", parent=self.root)
+
         # Log usage
         self.log_usage("Remove Patient")
 
     def count_visits(self):
-        date_str = simpledialog.askstring("Input", "Enter the date (yyyy-mm-dd):",parent=self.root)
+        date_str = simpledialog.askstring(
+            "Input", "Enter the date (yyyy-mm-dd):", parent=self.root)
         if date_str is not None:
             try:
                 date = datetime.strptime(date_str, "%Y-%m-%d").date()
                 total_visits = self.patient_manager.count_visits_on_date(date)
-                messagebox.showinfo("Visits Count", f"Total visits on {date_str}: {total_visits}",parent=self.root)
+                messagebox.showinfo("Visits Count", f"Total visits on {date_str}: {total_visits}", parent=self.root)
             except ValueError:
-                messagebox.showerror("Error", "Invalid date format. Please enter date in yyyy-mm-dd format.",parent=self.root)
-        
-        # Log usage 
+                messagebox.showerror(
+                    "Error", "Invalid date format. Please enter date in yyyy-mm-dd format.", parent=self.root)
+
+        # Log usage
         self.log_usage("Count Visits")
+
 
 if __name__ == "__main__":
     root = tk.Tk()
