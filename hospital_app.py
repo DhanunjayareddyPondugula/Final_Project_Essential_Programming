@@ -138,7 +138,7 @@ class HospitalApp:
         # Create a new window for adding a patient
         self.add_patient_window = Toplevel(self.root)
         self.add_patient_window.title("Add Patient")
-        self.add_patient_window.geometry("400x500")
+        self.add_patient_window.geometry("500x500")
 
         # Styling
         label_bg_color = "#f0f0f0"
