@@ -53,6 +53,7 @@ Hospital role related username and passwords are stored in a csv file named `PA3
 1. Launch the application by running `hospital_app.py`.
 2. Select your role from the login screen.
 3. Use the provided interface to perform various tasks based on your role.
+4. Key statistics generated in the folder directly.
 
 ## Logging
 
